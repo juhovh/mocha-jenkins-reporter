@@ -11,7 +11,7 @@ General Information
 
 First you need to add the library to your package.json, right now it is not published in `npm` so you can use the following setting to get the latest version:
 
-`"mocha-jenkins-reporter": "https://github.com/futurice/mocha-jenkins-reporter/archive/master.tar.gz"`
+`"mocha-jenkins-reporter": "0.0.8"`
 
 For the actual test run you can use the following Makefile:
 
