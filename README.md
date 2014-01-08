@@ -1,7 +1,9 @@
 Mocha Jenkins Reporter
 ======================
 
-This reporter is useful if you want to run Node.js backend tests using mocha and need a nicely formatted Jenkins reports of the test runs. The existing `xunit` reporter is very similar, but doesn't make it possible to output both XML report and a console output at the same time, which would often be useful with Jenkins. It also doesn't handle separate tests suites but adds all tests to a single suite instead.
+This reporter is useful if you want to run Node.js backend tests using mocha and need a nicely formatted Jenkins reports of the test runs. The existing `xunit` reporter is very similar, but doesn't make it possible to output both XML report and a console output at the same time, which would often be useful with Jenkins.
+
+The `xunit` reporter also doesn't handle separate tests suites but adds all tests to a single suite instead, this reporter instead combines nested test suites to a single suite and uses that in the reports. As a nice plus, this reporter also shows the running time of each suite separately. All the code is released under the `MIT` license which can be found from the end of this file.
 
 
 General Information
@@ -49,3 +51,28 @@ Make sure to set the `Color ANSI Console Output` on and use for example `xterm` 
 After this you should be able to add `Publish JUnit test result report` in your `Post-build Actions` and write for example `report.xml` to the `Test report XMLs` field if your Makefile was exactly as above. You can use your own variations of these commands as you wish, but this should get anyone started.
 
 After all this setting up, just click `Save` and start building, you should get all errors nicely both to the console log as the tests are being run and finally to the Jenkins reports.
+
+License
+-------
+
+```
+Copyright (c) 2013-2014 Futurice Ltd
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
