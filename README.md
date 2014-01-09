@@ -9,7 +9,7 @@ The `xunit` reporter also doesn't handle separate tests suites but adds all test
 General Information
 -------------------
 
-First you need to add the library to your package.json, right now it is not published in `npm` so you can use the following setting to get the latest version:
+First you need to add the library to your package.json, you can use the following setting to get the latest version:
 
 `"mocha-jenkins-reporter": "0.0.8"`
 
