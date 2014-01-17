@@ -52,6 +52,16 @@ After this you should be able to add `Publish JUnit test result report` in your 
 
 After all this setting up, just click `Save` and start building, you should get all errors nicely both to the console log as the tests are being run and finally to the Jenkins reports.
 
+
+Optional Settings
+-----------------
+
+Optionally, this reporter can create uniquely named XML report files if you're running parallelized Mocha processes. Simply set an environment variable before running Mocha.
+  `PARALLEL_REPORTING=true`
+
+Separately, you can disable outermost XML tag(`<testsuites>`) also by setting an environment variable. This is ideal if you wish to concatenate all parallelized test reports to another, final, XML report.
+  `BARE_SUITES=true`
+
 License
 -------
 
