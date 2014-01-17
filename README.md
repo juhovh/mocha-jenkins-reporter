@@ -22,7 +22,7 @@ jenkins:
 .PHONY: jenkins
 ```
 
-The @ in the beginning is just `make` syntax for not printing out the line. Because mocha by default reports the number of failed tests as the return code (and it is a good thing) we need to add `|| true` to the end of the command in order to make Jenkins not interpret this run as a crash. 
+The @ in the beginning is just `make` syntax for not printing out the line. Because mocha by default reports the number of failed tests as the return code (and it is a good thing) we need to add `|| true` to the end of the command in order to make Jenkins not interpret this run as a crash.
 
 The environment variable `JUNIT_REPORT_PATH` is used for passing the output filename for the reporter. Any existing reports in the same path will be overwritten, so be careful with it. If the environment variable is not set, no JUnit style XML report is written and the test results are only printed to the console.
 
