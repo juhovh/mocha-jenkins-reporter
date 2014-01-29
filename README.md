@@ -22,7 +22,7 @@ jenkins:
 .PHONY: jenkins
 ```
 
-The @ in the beginning is just `make` syntax for not printing out the line. Because mocha by default reports the number of failed tests as the return code (and it is a good thing) we need to add `|| true` to the end of the command in order to make Jenkins not interpret this run as a crash. 
+The @ in the beginning is just `make` syntax for not printing out the line. Because mocha by default reports the number of failed tests as the return code (and it is a good thing) we need to add `|| true` to the end of the command in order to make Jenkins not interpret this run as a crash.
 
 The environment variable `JUNIT_REPORT_PATH` is used for passing the output filename for the reporter. Any existing reports in the same path will be overwritten, so be careful with it. If the environment variable is not set, no JUnit style XML report is written and the test results are only printed to the console.
 
@@ -51,6 +51,16 @@ Make sure to set the `Color ANSI Console Output` on and use for example `xterm` 
 After this you should be able to add `Publish JUnit test result report` in your `Post-build Actions` and write for example `report.xml` to the `Test report XMLs` field if your Makefile was exactly as above. You can use your own variations of these commands as you wish, but this should get anyone started.
 
 After all this setting up, just click `Save` and start building, you should get all errors nicely both to the console log as the tests are being run and finally to the Jenkins reports.
+
+
+Optional Settings
+-----------------
+
+Optionally, this reporter can create uniquely named XML report files if you're running parallelized Mocha processes. Simply set an environment variable before running Mocha.
+  `PARALLEL_REPORTING=true`
+
+Separately, you can disable outermost XML tag(`<testsuites>`) also by setting an environment variable. This is ideal if you wish to concatenate all parallelized test reports to another, final, XML report.
+  `BARE_SUITES=true`
 
 License
 -------
