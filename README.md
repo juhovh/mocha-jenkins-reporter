@@ -11,7 +11,7 @@ General Information
 
 First you need to add the library to your package.json, you can use the following setting to get the latest version:
 
-`"mocha-jenkins-reporter": "0.1.1"`
+`"mocha-jenkins-reporter": "0.1.2"`
 
 For the actual test run you can use the following Makefile:
 
