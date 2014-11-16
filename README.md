@@ -26,6 +26,8 @@ The @ in the beginning is just `make` syntax for not printing out the line. Beca
 
 The environment variable `JUNIT_REPORT_PATH` is used for passing the output filename for the reporter. Any existing reports in the same path will be overwritten, so be careful with it. If the environment variable is not set, no JUnit style XML report is written and the test results are only printed to the console.
 
+The environment variable `JUNIT_REPORT_NAME` is used for giving an optional name for testsuites, defaults to "Mocha Tests".
+
 The environment variable `JUNIT_REPORT_STACK` is used to enable writing the stack trace for failed tests.
 
 Example console output of the reporter:
