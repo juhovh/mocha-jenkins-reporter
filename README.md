@@ -61,7 +61,7 @@ SonarQube Integration
 
 [SonarQube](http://www.sonarqube.org/) is a popular tool for continuous inspection of code quality. You can find documentation for JavaScript language on [JavaScript Plugin](http://docs.sonarqube.org/display/SONAR/JavaScript+Plugin) page.
 
-One aspect of SonarQube analysis is outcome of unit tests. To properly display tests results environment variable `JENKINS_REPORTER_ENABLE_SONAR` must be set to `true`. By default reporter looks for tests in `./test` directory. It can be changed using environment variable `JENKINS_REPORTER_TEST_DIR` and providing relative path to the directory with tests.
+One aspect of SonarQube analysis is outcome of unit tests. To properly display test results environment variable `JENKINS_REPORTER_ENABLE_SONAR` must be set to `true`. By default reporter looks for tests in `./test` directory. It can be changed using environment variable `JENKINS_REPORTER_TEST_DIR` and providing relative path to the directory with tests.
 
 License
 -------
