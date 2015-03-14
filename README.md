@@ -11,7 +11,7 @@ General Information
 
 First you need to add the library to your package.json, you can use the following setting to get the latest version:
 
-`"mocha-jenkins-reporter": "0.1.5"`
+`"mocha-jenkins-reporter": "0.1.6"`
 
 For the actual test run you can use the following Makefile:
 
@@ -67,7 +67,8 @@ License
 -------
 
 ```
-Copyright (c) 2013-2015 Futurice Ltd
+Copyright (c) 2015 Juho Vähä-Herttua and contributors
+Copyright (c) 2013-2014 Futurice Ltd and contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

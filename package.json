@@ -1,6 +1,6 @@
 {
   "name": "mocha-jenkins-reporter",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "jenkins reporter for mocha",
   "main": "index.js",
   "directories": "./lib",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/futurice/mocha-jenkins-reporter.git"
+    "url": "https://github.com/juhovh/mocha-jenkins-reporter.git"
   },
   "keywords": [
     "mocha",
