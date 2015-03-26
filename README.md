@@ -39,6 +39,20 @@ Example console output of the reporter:
   Suite duration: 0.048 s, Tests: 1
 ```
 
+Programmatic Configuration
+--------------------------
+All of the above config values can be set with options passed in to mocha.
+```
+mocha({
+            "reporter": "mocha-jenkins-reporter",
+            "reporterOptions": {
+                "junit_report_name": "Tests",
+                "junit_report_path": "report.xml",
+                "junit_report_stack": 1
+            }
+        }
+```
+
 Jenkins Setup
 -------------
 
