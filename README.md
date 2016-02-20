@@ -72,6 +72,15 @@ After this you should be able to add `Publish JUnit test result report` in your 
 
 After all this setting up, just click `Save` and start building, you should get all errors nicely both to the console log as the tests are being run and finally to the Jenkins reports.
 
+Enabling Jenkins Screenshots
+----------------------------
+
+Jenkins screenshot attachments can be written to the report to allow for a screenshot attachment in each test failure. Simply specify a reporterOption of `spec` or `loop`. This writes a `system-out` xml element to the JUnit report, leveraging the `Publish test attachments` feature of the `JUnit Attachments Plugin`.
+
+`spec` will write the full path of the screenshot with a filename consisting of "suitename+classname+test.title+extension". `loop` pulls and sorts all screenshots with specific filename text from `JUNIT_REPORT_PATH` and writes them in order according to the names of the files pulled. The `imagestring` reporterOption can be used to specify what files to pull, allowing for custom screenshot naming conventions on the mocha side, otherwise it defaults to the test suite name.
+
+Screenshot extension defaults to ".png", but can also be passed in with the `imagetype` reporterOption.
+
 SonarQube Integration
 ---------------------
 
