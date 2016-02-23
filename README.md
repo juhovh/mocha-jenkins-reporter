@@ -30,6 +30,8 @@ The environment variable `JUNIT_REPORT_NAME` is used for giving an optional name
 
 The environment variable `JUNIT_REPORT_STACK` is used to enable writing the stack trace for failed tests.
 
+The environment variable `JUNIT_REPORT_PACKAGES` is used to enable package name to be represented by relative path to test.
+
 Example console output of the reporter:
 
 ```
