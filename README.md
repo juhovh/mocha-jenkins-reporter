@@ -11,7 +11,7 @@ General Information
 
 First you need to add the library to your package.json, you can use the following setting to get the latest version:
 
-`"mocha-jenkins-reporter": "0.1.9"`
+`"mocha-jenkins-reporter": "0.2.0"`
 
 For the actual test run you can use the following Makefile:
 
@@ -29,6 +29,8 @@ The environment variable `JUNIT_REPORT_PATH` is used for passing the output file
 The environment variable `JUNIT_REPORT_NAME` is used for giving an optional name for testsuites, defaults to "Mocha Tests".
 
 The environment variable `JUNIT_REPORT_STACK` is used to enable writing the stack trace for failed tests.
+
+The environment variable `JUNIT_REPORT_PACKAGES` is used to enable package name to be represented by relative path to test.
 
 Example console output of the reporter:
 
@@ -70,16 +72,14 @@ After this you should be able to add `Publish JUnit test result report` in your 
 
 After all this setting up, just click `Save` and start building, you should get all errors nicely both to the console log as the tests are being run and finally to the Jenkins reports.
 
-
 Enabling Jenkins Screenshots
 ----------------------------
 
 Jenkins screenshot attachments can be written to the report to allow for a screenshot attachment in each test failure. Simply specify a reporterOption of `spec` or `loop`. This writes a `system-out` xml element to the JUnit report, leveraging the `Publish test attachments` feature of the `JUnit Attachments Plugin`.
 
-`spec` will write the full path of the screenshot with a filename consisting of "classname+test.title+extension". `loop` pulls and sorts all screenshots of a particular extension from `JUNIT_REPORT_PATH` and writes them in order according to the names of the files pulled.
+`spec` will write the full path of the screenshot with a filename consisting of "suitename+classname+test.title+extension". `loop` pulls and sorts all screenshots with specific filename text from `JUNIT_REPORT_PATH` and writes them in order according to the names of the files pulled. The `imagestring` reporterOption can be used to specify what files to pull, allowing for custom screenshot naming conventions on the mocha side, otherwise it defaults to the test suite name.
 
 Screenshot extension defaults to ".png", but can also be passed in with the `imagetype` reporterOption.
-
 
 SonarQube Integration
 ---------------------
@@ -92,7 +92,7 @@ License
 -------
 
 ```
-Copyright (c) 2015 Juho Vähä-Herttua and contributors
+Copyright (c) 2015-2016 Juho Vähä-Herttua and contributors
 Copyright (c) 2013-2014 Futurice Ltd and contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
