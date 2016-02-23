@@ -83,7 +83,7 @@ License
 -------
 
 ```
-Copyright (c) 2015 Juho Vähä-Herttua and contributors
+Copyright (c) 2015-2016 Juho Vähä-Herttua and contributors
 Copyright (c) 2013-2014 Futurice Ltd and contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
