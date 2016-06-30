@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "diff": "1.0.7",
-    "mkdirp": "0.5.0",
+    "mkdirp": "0.5.1",
     "mocha": ">=2.0.0"
   },
   "author": "Juho Vähä-Herttua",
