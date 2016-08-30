@@ -21,12 +21,6 @@ For the actual test run you can add the following to package.json:
 }
 ```
 
-And then run Jenkins tests with:
-
-```
-npm run test-jenkins
-```
-
 The environment variable `JUNIT_REPORT_PATH` is used for passing the output filename or directory for the reporter. If an explicit filename is used, any existing reports in the same path will be overwritten, so be careful with it. If an existing directory is used instead, then the output will be in the format "path/to/directory/timestamp.xml" where timestamp is milliseconds since January 1, 1970. If the environment variable is not set, no JUnit style XML report is written and the test results are only printed to the console.
 
 The environment variable `JUNIT_REPORT_NAME` is used for giving an optional name for testsuites, defaults to "Mocha Tests".
@@ -66,7 +60,7 @@ If you use the Makefile specified in the last section, setting up Jenkins should
 ```
 cd $WORKSPACE
 npm install
-make jenkins
+npm run test-jenkins
 ```
 
 Make sure to set the `Color ANSI Console Output` on and use for example `xterm` for the `ANSI color map` setting, in order to show the output colors nicely in Jenkins.
