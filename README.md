@@ -13,16 +13,19 @@ First you need to add the library to your package.json, you can use the followin
 
 `"mocha-jenkins-reporter": "0.2.4"`
 
-For the actual test run you can use the following Makefile:
+For the actual test run you can add the following to package.json:
 
 ```
-jenkins:
-	@JUNIT_REPORT_PATH=report.xml JUNIT_REPORT_STACK=1 ./node_modules/.bin/mocha --reporter mocha-jenkins-reporter || true
-
-.PHONY: jenkins
+"scripts": {
+  "test-jenkins": "JUNIT_REPORT_PATH=/report.xml mocha --colors --reporter mocha-jenkins-reporter"
+}
 ```
 
-The @ in the beginning is just `make` syntax for not printing out the line. Because mocha by default reports the number of failed tests as the return code (and it is a good thing) we need to add `|| true` to the end of the command in order to make Jenkins not interpret this run as a crash.
+And then run Jenkins tests with:
+
+```
+npm run test-jenkins
+```
 
 The environment variable `JUNIT_REPORT_PATH` is used for passing the output filename or directory for the reporter. If an explicit filename is used, any existing reports in the same path will be overwritten, so be careful with it. If an existing directory is used instead, then the output will be in the format "path/to/directory/timestamp.xml" where timestamp is milliseconds since January 1, 1970. If the environment variable is not set, no JUnit style XML report is written and the test results are only printed to the console.
 
