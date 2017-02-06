@@ -19,10 +19,12 @@
   ],
   "dependencies": {
     "diff": "1.0.7",
-    "eslint": "3.12.1",
     "mkdirp": "0.5.1",
     "mocha": ">=2.0.0",
     "xml": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.1"
   },
   "author": "Juho Vähä-Herttua",
   "license": "MIT",
