@@ -23,6 +23,9 @@
     "mocha": ">=2.0.0",
     "xml": "^1.0.1"
   },
+  "devDependencies": {
+    "eslint": "^3.12.1"
+  },
   "author": "Juho Vähä-Herttua",
   "license": "MIT",
   "bugs": {
