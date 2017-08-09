@@ -29,6 +29,7 @@
     "url": "https://github.com/juhovh/mocha-jenkins-reporter/issues"
   },
   "devDependencies": {
-    "eslint": "3.12.1"
+    "eslint": "3.12.1",
+    "strip-ansi": "^4.0.0"
   }
 }
