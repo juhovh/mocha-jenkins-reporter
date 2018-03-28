@@ -55,7 +55,7 @@ mocha({
 Jenkins Setup
 -------------
 
-If you use the Makefile specified in the last section, setting up Jenkins should be pretty straighforward. For the shell execution you can use something like this:
+If you use the package.json approach specified in the last section, setting up Jenkins should be pretty straighforward. For the shell execution you can use something like this:
 
 ```
 cd $WORKSPACE
@@ -65,7 +65,7 @@ npm run test-jenkins
 
 Make sure to set the `Color ANSI Console Output` on and use for example `xterm` for the `ANSI color map` setting, in order to show the output colors nicely in Jenkins.
 
-After this you should be able to add `Publish JUnit test result report` in your `Post-build Actions` and write for example `report.xml` to the `Test report XMLs` field if your Makefile was exactly as above. You can use your own variations of these commands as you wish, but this should get anyone started.
+After this you should be able to add `Publish JUnit test result report` in your `Post-build Actions` and write for example `report.xml` to the `Test report XMLs` field if your package.json was exactly as above. You can use your own variations of these commands as you wish, but this should get anyone started.
 
 After all this setting up, just click `Save` and start building, you should get all errors nicely both to the console log as the tests are being run and finally to the Jenkins reports.
 
