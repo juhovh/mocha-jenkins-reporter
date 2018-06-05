@@ -1,6 +1,6 @@
 {
   "name": "mocha-jenkins-reporter",
-  "version": "0.3.12",
+  "version": "0.4.0",
   "description": "jenkins reporter for mocha",
   "main": "index.js",
   "directories": "./lib",
@@ -20,7 +20,7 @@
   "dependencies": {
     "diff": "1.0.7",
     "mkdirp": "0.5.1",
-    "mocha": "^3.0.0",
+    "mocha": "^5.2.0",
     "xml": "^1.0.1"
   },
   "author": "Juho Vähä-Herttua",
