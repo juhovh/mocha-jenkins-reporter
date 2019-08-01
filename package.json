@@ -29,6 +29,6 @@
     "url": "https://github.com/juhovh/mocha-jenkins-reporter/issues"
   },
   "devDependencies": {
-    "eslint": "3.12.1"
+    "eslint": "4.18.2"
   }
 }
