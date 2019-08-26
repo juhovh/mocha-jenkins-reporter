@@ -20,8 +20,10 @@
   "dependencies": {
     "diff": "4.0.1",
     "mkdirp": "0.5.1",
-    "mocha": "^5.2.0",
     "xml": "^1.0.1"
+  },
+  "peerDependencies": {
+    "mocha": "^5.2.0"
   },
   "author": "Juho Vähä-Herttua",
   "license": "MIT",
