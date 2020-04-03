@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "diff": "4.0.1",
-    "mkdirp": "0.5.1",
+    "mkdirp": "^0.5.4",
     "xml": "^1.0.1"
   },
   "peerDependencies": {
