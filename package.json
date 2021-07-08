@@ -23,7 +23,7 @@
     "xml": "^1.0.1"
   },
   "peerDependencies": {
-    "mocha": "^5.2.0 || ^6.0 || ^7.0 || ^8.0"
+    "mocha": "^5.2.0 || ^6.0 || ^7.0 || ^8.0 || ^9.0"
   },
   "author": "Juho Vähä-Herttua",
   "license": "MIT",
