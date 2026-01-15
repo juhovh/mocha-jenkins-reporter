@@ -18,7 +18,7 @@
     "reporter"
   ],
   "dependencies": {
-    "diff": "4.0.1",
+    "diff": "8.0.3",
     "mkdirp": "^1.0.4",
     "xml": "^1.0.1"
   },
